@@ -21,7 +21,6 @@ Two folders, everything else is metadata.
 | --- | --- | --- |
 | Build in this repository | 3.10.0.794 | Custom FPT package |
 | Replacement build | 3.12 | Custom FPT package, dated 15 November 2026 |
-| Latest upstream SEB for Windows | 3.10.2, released 8 May 2026 | SafeExamBrowser.ch |
 
 The 3.10.0.794 and 3.12 numbers belong to the custom packages distributed in this environment, not to the upstream release line. Upstream has nothing newer than 3.10.2, so version strings here cannot be compared with the official ones.
 
@@ -47,16 +46,10 @@ Open `Application/` and double click `SafeExamBrowser.exe`. That starts the modi
 - Supply a `.seb` settings file if the session requires one, and build it with `Application/Configuration/SEBConfigTool.exe`.
 - If a session leaves the machine in a blocked state, run `Application/Reset/SafeExamBrowser.ResetUtility.exe`.
 
-## Status
-
-This environment receives the custom 3.12 package on 15 November 2026. Once it lands, the 3.10.0.794 behaviour recorded here no longer applies to that environment, so the repository is published as a frozen record and will not receive updates.
-
 ## Notes
-
+- Binaries are Git LFS objects. Run `git lfs install` before cloning, otherwise you receive pointer files that cannot execute.
+- This environment receives the custom 3.12 package on 15 November 2026. Once it lands, the 3.10.0.794 behaviour recorded here no longer applies to that environment, so the repository is published as a frozen record and will not receive updates.
 - Built for education and research. The purpose is to document how the lockdown behaves in a version that is already out of use, and to support an academic defense of that work.
 - This project does not condone cheating. Using it to gain an advantage in a live exam, or against any institution's rules, is outside what it is offered for.
 - No support. The build is published as is, with no warranty. If it fails to start, breaks a session, or leaves the machine needing a reset, you handle that yourself; there is no channel to report it to and nothing will be fixed.
-- Binaries are Git LFS objects. Run `git lfs install` before cloning, otherwise you receive pointer files that cannot execute.
-- The two shortcuts inside `Application/` both point to `D:\SafeExamBrowser\Application\SafeExamBrowser.exe`, an absolute path from the machine where they were made. They are dead weight elsewhere; double click the exe as described above.
-- `Application/seb_x64.dll` is 0 bytes in this copy, the native helper it represents is absent.
 - Safe Exam Browser is developed by SafeExamBrowser.ch under its own license. This build is a personal research artifact on a machine I control, and is not offered for use in exams at any institution.
